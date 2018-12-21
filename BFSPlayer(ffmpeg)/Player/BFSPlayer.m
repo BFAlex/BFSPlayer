@@ -18,15 +18,19 @@
     AVStream            *_stream;
     AVPacket            *_packet;
     AVPicture           *_picture;
-    AVCodecContext      *_codecCtx;
-    AVFrame             *_frame;
+//    AVCodecContext      *_codecCtx;
+//    AVFrame             *_frame;
     
     BOOL                _isReleaseResource;
     int                 _videoStream;
 //    double              _fps;
-    int                 _videoWidth;
-    int                 _videoHeight;
+//    int                 _videoWidth;
+//    int                 _videoHeight;
 }
+@property (nonatomic) AVFrame *frame;
+@property (nonatomic) AVCodecContext *codecCtx;
+@property (nonatomic, assign) int videoWidth;
+@property (nonatomic, assign) int videoHeight;
 
 @end
 
@@ -133,9 +137,12 @@ configError:
 - (BOOL)stepFrame {
     
     int frameFinished = 0;
-    while (!frameFinished && av_read_frame(_formatCtx, &_packet) >= 0) {
+    if (_packet == NULL) {
+        _packet = av_packet_alloc();
+    }
+    while (!frameFinished && av_read_frame(_formatCtx, _packet) >= 0) {
         if (_packet->stream_index == _videoStream) {
-            avcodec_decode_video2(_codecCtx, _frame, &frameFinished, &_packet);
+            avcodec_decode_video2(_codecCtx, _frame, &frameFinished, _packet);
         }
     }
     if (frameFinished == 0 && _isReleaseResource == NO) {
@@ -164,11 +171,11 @@ configError:
     
     avpicture_free(&_picture);
     avpicture_alloc(&_picture, AV_PIX_FMT_RGB24, _videoWidth, _videoHeight);
-    struct SwsContext *imgConvertCtx = sws_getContext(_frame->width,
-                                                      _frame->height,
+    struct SwsContext *imgConvertCtx = sws_getContext(self.frame->width,
+                                                      self.frame->height,
                                                       AV_PIX_FMT_YUV420P,
-                                                      _videoWidth,
-                                                      _videoHeight,
+                                                      self.videoWidth,
+                                                      self.videoHeight,
                                                       AV_PIX_FMT_RGB24,
                                                       SWS_FAST_BILINEAR,
                                                       NULL,
