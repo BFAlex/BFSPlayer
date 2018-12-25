@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C483A3C221D213E800E363E9 /* BFSPlayerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C483A3C121D213E800E363E9 /* BFSPlayerController.storyboard */; };
+		C483A3C521D2142200E363E9 /* BFSPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C483A3C421D2142200E363E9 /* BFSPlayerController.m */; };
+		C483A3CA21D21A0300E363E9 /* BFSBasePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C483A3C921D21A0300E363E9 /* BFSBasePlayer.m */; };
+		C483A3CD21D21A3900E363E9 /* FFMPegPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C483A3CC21D21A3900E363E9 /* FFMPegPlayer.m */; };
 		C48B177121CC8343001A75C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C48B177021CC8343001A75C0 /* AppDelegate.m */; };
 		C48B177421CC8343001A75C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48B177321CC8343001A75C0 /* ViewController.m */; };
 		C48B177721CC8343001A75C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48B177521CC8343001A75C0 /* Main.storyboard */; };
@@ -33,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C483A3C121D213E800E363E9 /* BFSPlayerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BFSPlayerController.storyboard; sourceTree = "<group>"; };
+		C483A3C321D2142200E363E9 /* BFSPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFSPlayerController.h; sourceTree = "<group>"; };
+		C483A3C421D2142200E363E9 /* BFSPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFSPlayerController.m; sourceTree = "<group>"; };
+		C483A3C821D21A0300E363E9 /* BFSBasePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFSBasePlayer.h; sourceTree = "<group>"; };
+		C483A3C921D21A0300E363E9 /* BFSBasePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFSBasePlayer.m; sourceTree = "<group>"; };
+		C483A3CB21D21A3900E363E9 /* FFMPegPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFMPegPlayer.h; sourceTree = "<group>"; };
+		C483A3CC21D21A3900E363E9 /* FFMPegPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFMPegPlayer.m; sourceTree = "<group>"; };
 		C48B176C21CC8342001A75C0 /* BFSPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFSPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48B176F21CC8343001A75C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C48B177021CC8343001A75C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,6 +205,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C483A3C021D213C000E363E9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				C483A3C121D213E800E363E9 /* BFSPlayerController.storyboard */,
+				C483A3C321D2142200E363E9 /* BFSPlayerController.h */,
+				C483A3C421D2142200E363E9 /* BFSPlayerController.m */,
+				C483A3C821D21A0300E363E9 /* BFSBasePlayer.h */,
+				C483A3C921D21A0300E363E9 /* BFSBasePlayer.m */,
+				C483A3CB21D21A3900E363E9 /* FFMPegPlayer.h */,
+				C483A3CC21D21A3900E363E9 /* FFMPegPlayer.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		C48B176321CC8342001A75C0 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +239,7 @@
 		C48B176E21CC8342001A75C0 /* BFSPlayer(ffmpeg) */ = {
 			isa = PBXGroup;
 			children = (
+				C483A3C021D213C000E363E9 /* Module */,
 				C48B195621CC9C26001A75C0 /* Resource */,
 				C48B178521CC8422001A75C0 /* Core */,
 				C48B181421CC8517001A75C0 /* Player */,
@@ -521,6 +547,7 @@
 				C48B177C21CC834D001A75C0 /* LaunchScreen.storyboard in Resources */,
 				C48B177921CC834D001A75C0 /* Assets.xcassets in Resources */,
 				C48B195821CCDA9C001A75C0 /* test_video.mp4 in Resources */,
+				C483A3C221D213E800E363E9 /* BFSPlayerController.storyboard in Resources */,
 				C48B177721CC8343001A75C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,8 +559,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C483A3CD21D21A3900E363E9 /* FFMPegPlayer.m in Sources */,
 				C48B177421CC8343001A75C0 /* ViewController.m in Sources */,
+				C483A3CA21D21A0300E363E9 /* BFSBasePlayer.m in Sources */,
 				C48B177F21CC834D001A75C0 /* main.m in Sources */,
+				C483A3C521D2142200E363E9 /* BFSPlayerController.m in Sources */,
 				C48B181721CC852E001A75C0 /* BFSPlayer.m in Sources */,
 				C48B177121CC8343001A75C0 /* AppDelegate.m in Sources */,
 			);

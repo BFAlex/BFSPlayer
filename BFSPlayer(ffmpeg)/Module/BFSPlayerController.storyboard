@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZQO-bU-xWR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player Controller-->
+        <scene sceneID="XVz-KJ-mjy">
+            <objects>
+                <viewController id="ZQO-bU-xWR" customClass="BFSPlayerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zv9-g7-7OU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-j3-72l">
+                                <rect key="frame" x="0.0" y="20" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6kj-j3-72l" secondAttribute="height" multiplier="16:9" id="lDV-yU-2fx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4E-lc-pop">
+                                <rect key="frame" x="16" y="258" width="343" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="DP5-Mo-9HF"/>
+                                </constraints>
+                                <state key="normal" title="play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionPlayBtn:" destination="ZQO-bU-xWR" eventType="touchUpInside" id="ONn-fC-DHv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6kj-j3-72l" firstAttribute="top" secondItem="lx7-i7-a8C" secondAttribute="top" id="H2E-hF-roo"/>
+                            <constraint firstItem="lx7-i7-a8C" firstAttribute="trailing" secondItem="m4E-lc-pop" secondAttribute="trailing" constant="16" id="Wlj-Hz-H9d"/>
+                            <constraint firstItem="m4E-lc-pop" firstAttribute="top" secondItem="6kj-j3-72l" secondAttribute="bottom" constant="27" id="fvE-Mw-zFs"/>
+                            <constraint firstItem="m4E-lc-pop" firstAttribute="leading" secondItem="lx7-i7-a8C" secondAttribute="leading" constant="16" id="hkg-eF-9I1"/>
+                            <constraint firstItem="6kj-j3-72l" firstAttribute="trailing" secondItem="lx7-i7-a8C" secondAttribute="trailing" id="lPJ-ff-FlL"/>
+                            <constraint firstItem="6kj-j3-72l" firstAttribute="leading" secondItem="lx7-i7-a8C" secondAttribute="leading" id="qQA-0Q-w99"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lx7-i7-a8C"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="6kj-j3-72l" id="8re-l6-1kL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rt5-j4-fft" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154.40000000000001" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>
