@@ -27,8 +27,8 @@
 //    int                 _videoWidth;
 //    int                 _videoHeight;
 }
-@property (nonatomic) AVFrame *frame;
-@property (nonatomic) AVCodecContext *codecCtx;
+@property (nonatomic, assign) AVFrame *frame;
+@property (nonatomic, assign) AVCodecContext *codecCtx;
 @property (nonatomic, assign) int videoWidth;
 @property (nonatomic, assign) int videoHeight;
 
