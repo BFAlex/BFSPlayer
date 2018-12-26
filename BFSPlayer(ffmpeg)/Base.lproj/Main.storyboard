@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +13,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aAw-eo-fRs"/>
+                        <viewControllerLayoutGuide type="bottom" id="fVp-uZ-MvT"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,14 +42,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tq3-rD-Qyu" secondAttribute="trailing" constant="16" id="3Zn-3A-McB"/>
-                            <constraint firstItem="JXx-zG-3Wc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Plp-WH-Ji4"/>
+                            <constraint firstAttribute="trailing" secondItem="Tq3-rD-Qyu" secondAttribute="trailing" constant="16" id="3Zn-3A-McB"/>
+                            <constraint firstItem="JXx-zG-3Wc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Plp-WH-Ji4"/>
                             <constraint firstItem="Tq3-rD-Qyu" firstAttribute="top" secondItem="JXx-zG-3Wc" secondAttribute="bottom" constant="8" id="Poa-zF-ESp"/>
-                            <constraint firstItem="Tq3-rD-Qyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="esB-Vg-LZJ"/>
-                            <constraint firstItem="JXx-zG-3Wc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jzK-hC-Kol"/>
-                            <constraint firstItem="JXx-zG-3Wc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uS7-6E-yCl"/>
+                            <constraint firstItem="Tq3-rD-Qyu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="esB-Vg-LZJ"/>
+                            <constraint firstItem="JXx-zG-3Wc" firstAttribute="top" secondItem="aAw-eo-fRs" secondAttribute="bottom" id="jzK-hC-Kol"/>
+                            <constraint firstItem="JXx-zG-3Wc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="uS7-6E-yCl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="playerBG" destination="JXx-zG-3Wc" id="u5s-TZ-toV"/>
